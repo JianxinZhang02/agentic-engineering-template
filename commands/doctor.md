@@ -4,6 +4,12 @@
 
 检查模板仓库是否处于可使用状态。
 
+## 推荐执行
+
+```bash
+python scripts/doctor.py
+```
+
 ## 检查项
 
 - 根目录是否存在 `README.md`、`AGENTS.md`。
@@ -12,6 +18,8 @@
 - `skills/`、`commands/`、`eval/` 是否有 README。
 - 是否存在明显本地路径、密钥、私有资料残留。
 - 示例需求是否仍能作为 onboarding 材料。
+- `core_skills.json` 中的核心 Skill 是否存在。
+- `prompts/*.tmpl.md` 与对应 `.md` 是否同步。
 
 ## 输出
 
@@ -21,4 +29,3 @@
 阻塞项：
 建议修复：
 ```
-

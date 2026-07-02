@@ -11,6 +11,7 @@
 3. 涉及具体项目时，读取 `context/project/{project}/INDEX.md`
 4. 涉及需求推进时，读取目标需求目录下的全部现有产物
 5. 涉及代码、安全、工具化、验证时，按索引读取对应 Skill、Rule、Prompt 或 Policy
+6. 不确定查哪里时，读取 `prompts/knowledge_base.md`
 
 不要一次性读取所有文档。先读索引，再按任务需要读取强相关文件。
 
@@ -32,6 +33,7 @@
 - 涉及认证、授权、敏感数据、外部 API、用户输入、文件上传时，必须按 `skills/security-review/SKILL.md` 检查。
 - 准备新增或修改 Skill、Agent、Command、Rule、Hook、Prompt、MCP 时，必须按 `skills/tool-governance/SKILL.md` 判断。
 - 完成需求后，必须整理 `notes.md`，并建议沉淀到 `context/`。
+- 修改通用 Prompt 或核心 Skill 时，必须补充或复跑 `eval/tasks/`，并运行 `python scripts/doctor.py`。
 - 不修改与当前任务无关的代码、规范或知识文档。
 - 不为偶发任务创建长期 Skill、Agent 或永久规则。
 
@@ -65,6 +67,8 @@
 - 可安装规则从 `rules/` 查找。
 - 自动化约束从 `hooks/` 查找。
 - 外部连接边界从 `mcp-configs/` 查找。
+- 长期 AI 工程计划从 `agent-projects/` 查找。
+- 核心 Skill 清单从 `core_skills.json` 查找。
 - 如果索引中没有相关资料，应明确说明缺口，不要自行补全。
 - 设计阶段应优先基于仓库内上下文，不应使用互联网资料替代项目事实。
 

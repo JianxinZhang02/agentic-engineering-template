@@ -16,6 +16,7 @@
 - `security-policy-case.md`
 - `prompt-regression-case.md`
 - `metrics.md`
+- `tasks/`：可复现的任务级 eval，每个任务包含 `prompt.md` 和 `eval.md`。
 
 ## 通过标准
 
@@ -32,3 +33,4 @@
 - 新增 Skill、Command、Rule、Hook 或 Prompt 时，至少补一个相关 eval。
 - 修改 `AGENTS.md` 后必须复跑 prompt regression。
 - 涉及安全和权限的改动必须复跑 security policy eval。
+- 修改通用 Prompt、核心 Skill 或 MCP 配置后，建议增加一个 `eval/tasks/{name}/`。

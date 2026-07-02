@@ -1,0 +1,29 @@
+{
+  "extensions": [
+    {
+      "name": "github",
+      "type": "remote-or-local-mcp",
+      "config": "mcp-configs/mcp-servers.example.json",
+      "owner": "template-maintainers",
+      "status": "example",
+      "risk": "Token scopes must be least privilege."
+    },
+    {
+      "name": "knowledge-base",
+      "type": "remote-mcp",
+      "config": "mcp-configs/mcp-servers.example.json",
+      "owner": "template-maintainers",
+      "status": "example",
+      "risk": "Retrieved content is untrusted until confirmed."
+    },
+    {
+      "name": "browser",
+      "type": "local-or-remote-mcp",
+      "config": "mcp-configs/mcp-servers.example.json",
+      "owner": "template-maintainers",
+      "status": "example",
+      "risk": "Avoid destructive production actions."
+    }
+  ]
+}
+

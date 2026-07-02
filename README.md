@@ -32,13 +32,16 @@
 ├── rules/                 # 可安装规则切片：common + 技术栈扩展
 ├── skills/                # 工具中立的专业能力包说明
 ├── agents/                # 角色化审查者和辅助者定义
+├── agent-projects/        # 长期 AI 辅助工程计划
 ├── commands/              # 标准动作说明
 ├── hooks/                 # Hook 设计和跨工具自动化约束
 ├── mcp-configs/           # MCP 集成样例和风险边界
 ├── adapters/              # Claude Code、Codex、WorkBuddy 等工具适配
 ├── eval/                  # 人工可执行的规范回归用例和指标
 ├── docs/                  # onboarding、运行模型、维护说明
-└── schemas/               # 后续机械化校验的轻量 schema
+├── schemas/               # 后续机械化校验的轻量 schema
+├── scripts/               # 轻量健康检查脚本
+└── core_skills.json       # 核心 Skill 清单
 ```
 
 ## 第一天要改什么
@@ -50,6 +53,7 @@
 - `requirements/_template/`：复制为第一个真实需求目录，例如 `requirements/2026-07-login-audit/`。
 - `adapters/`：选择你实际使用的工具，按文档配置入口。
 - `prompts/templates/` 和 `rules/`：按你的项目技术栈补充或裁剪。
+- 运行 `python scripts/doctor.py`：确认模板复制后没有缺文件、坏 JSON 或本地资料残留。
 
 ## 如何启动第一个需求
 
@@ -82,6 +86,8 @@
 - 每月按 `docs/template-maintenance.md` 做一次规范瘦身。
 - 用 `context/team/metrics.md` 记录门禁拦截、知识沉淀和工具使用情况。
 - 涉及安全、权限、敏感数据时，按 `skills/security-review/SKILL.md` 执行安全审查。
+- 长期迁移、清理、现代化、质量治理类工作，放入 `agent-projects/`，不要塞进单个需求目录。
+- 修改通用 Prompt 或核心 Skill 后，使用 `eval/tasks/` 增加可复现任务，并运行 `python scripts/doctor.py`。
 
 ## 第一版完成定义
 

@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "path": "skills/context-collection",
+      "reason": "Required before writing project facts or design decisions."
+    },
+    {
+      "path": "skills/requirement-lifecycle",
+      "reason": "Required to run the standard demand-to-acceptance workflow."
+    },
+    {
+      "path": "skills/verification-loop",
+      "reason": "Required before PR, release, or completion claims."
+    },
+    {
+      "path": "skills/security-review",
+      "reason": "Required for sensitive data, user input, auth, payments, and external API work."
+    },
+    {
+      "path": "skills/knowledge-curation",
+      "reason": "Required at acceptance to convert notes into durable context."
+    }
+  ]
+}
+

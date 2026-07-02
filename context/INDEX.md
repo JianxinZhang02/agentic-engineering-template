@@ -15,6 +15,9 @@
 - `hooks/`：机械化提醒、拦截和会话生命周期设计。
 - `mcp-configs/`：外部系统连接样例和风险边界。
 - `eval/`：模板行为回归用例。
+- `agent-projects/`：长期 AI 辅助工程计划。
+- `core_skills.json`：每个项目默认应可用的核心 Skill。
+- `scripts/doctor.py`：模板健康检查。
 
 ## 读取顺序
 
@@ -23,7 +26,8 @@
 3. 如果任务涉及反复出现的问题、AI 易错点或跨项目经验，读取 `experience/README.md`。
 4. 如果任务涉及代码编辑，读取 `prompts/common.minimal.md`，必要时读取 `prompts/common.md`。
 5. 如果任务涉及安全、工具化或验证，读取对应 Skill 和团队规范。
-6. 只读取与当前任务强相关的文档，不要把整个 `context/` 全量塞入上下文。
+6. 如果不知道该查哪里，读取 `prompts/knowledge_base.md`。
+7. 只读取与当前任务强相关的文档，不要把整个 `context/` 全量塞入上下文。
 
 ## 事实标注规则
 

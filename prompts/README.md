@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 核心指令 | `common.minimal.md` | 所有工具都应遵守的最小行为规则 |
 | 完整工作流 | `common.md` | 代码编辑和需求推进的标准流程 |
+| 知识路由 | `knowledge_base.md` | 告诉 Agent 各类任务应该查哪些文件 |
 | 项目/平台模板 | `templates/*.md` | 针对前端、后端、数据、移动端等技术栈的额外约束 |
 | 任务提示词 | `task-prompts/*.md` | PR 描述、预提交检查、修复 review 等快捷任务 |
 
@@ -17,6 +18,7 @@
 - 具体工具可以用 include、复制、软链接或插件机制加载这些文件。
 - 新增模板时必须说明适用技术栈、需要先读的项目文档、构建和测试入口。
 - 不把项目事实写进通用 Prompt，项目事实应放在 `context/project/{project}/`。
+- `.tmpl.md` 是源文件，`.md` 是当前可直接加载版本；二者应保持同步。
 
 ## 维护规则
 
@@ -24,4 +26,4 @@
 - 技术栈规则放 `templates/` 或 `rules/`。
 - 一次性任务不进入 `common.md`。
 - Prompt 改动必须补充或复跑 `eval/`。
-
+- 运行 `python scripts/doctor.py` 可检查 prompt 模板是否同步。

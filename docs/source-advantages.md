@@ -33,14 +33,24 @@
 - Skills 按需激活专业能力。
 - Eval 防止提示词和规则迭代造成行为退化。
 - 项目级大型任务应保留可追溯设计和验证记录。
+- 核心 Skill 清单区分默认能力和按需能力。
+- MCP/扩展需要可列出、可安装、可更新、可迁移，并有 owner。
+- Prompt 模板应有源文件和同步检查，避免生成文件陈旧。
+- Presubmit/doctor 类检查应机械化验证 JSON、Skill、Prompt、eval 关联。
 
 落地位置：
 
 - `context/team/ai-policy.md`
 - `prompts/`
+- `prompts/knowledge_base.md`
 - `eval/`
+- `eval/tasks/`
 - `skills/verification-loop/`
 - `prompts/task-prompts/`
+- `core_skills.json`
+- `agent-projects/`
+- `scripts/doctor.py`
+- `mcp-configs/extensions.catalog.json`
 
 ## Everything Claude Code
 
@@ -61,4 +71,3 @@
 - `skills/tool-governance/`
 - `skills/security-review/`
 - `adapters/`
-
