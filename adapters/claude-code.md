@@ -6,6 +6,8 @@
 - 将 `commands/` 中的动作映射为 slash command。
 - 将 `skills/` 中的 `SKILL.md` 作为 Claude Code Skill 的来源。
 - 将 `agents/` 中的角色定义映射为 Subagent 或审查提示。
+- 将 `rules/` 按 common + 技术栈复制或安装。
+- 将 `hooks/` 映射为 Claude Code 原生 hooks 时，避免重复加载。
 
 ## 配置建议
 
@@ -28,4 +30,4 @@
 
 - 不要让 `AGENTS.md` 变成巨型 CLAUDE 配置。
 - 工具配置变化时，优先更新适配文档，而不是改核心流程。
-
+- 如果通过插件加载了 Skills/Commands/Hooks，不要再手工完整复制同一批能力，避免重复触发。

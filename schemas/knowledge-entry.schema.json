@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Entry",
+  "type": "object",
+  "required": ["title", "scope", "source", "updated_at"],
+  "properties": {
+    "title": { "type": "string" },
+    "scope": { "type": "string", "enum": ["team", "project", "experience"] },
+    "source": { "type": "string" },
+    "owner": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["confirmed", "needs-review", "deprecated"] }
+  },
+  "additionalProperties": true
+}
+

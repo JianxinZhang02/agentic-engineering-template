@@ -9,6 +9,7 @@
 - 沉淀通用经验：更新 `context/experience/`。
 - 调整需求模板：更新 `requirements/_template/` 或 `templates/`。
 - 改进能力包：更新 `skills/`、`agents/`、`commands/`。
+- 改进提示词、规则、Hook 或 MCP：更新 `prompts/`、`rules/`、`hooks/`、`mcp-configs/`。
 - 补充工具适配：更新 `adapters/`。
 - 增加回归用例：更新 `eval/`。
 
@@ -18,6 +19,7 @@
 - `context/project/` 改动需要对应项目负责人 review。
 - `AGENTS.md` 改动必须说明为什么不能下沉到其他目录。
 - 新增 Skill、Agent、command 必须说明触发场景和复用频率。
+- 新增 Prompt、Rule、Hook、MCP 必须说明适用范围、风险边界和 eval 覆盖。
 - AI 生成的规范可以作为草稿，但合入前必须有人类确认。
 
 ## 不建议合入的内容
@@ -27,6 +29,8 @@
 - 重复已有规范的长篇说明。
 - 绑定单一工具且没有适配说明的核心流程。
 - 无真实使用场景的 Agent 或 Skill。
+- 没有安全边界的 MCP 配置。
+- 没有禁用/降级说明的阻塞型 Hook。
 
 ## 每月维护
 
@@ -37,4 +41,4 @@
 - 检查 `context/INDEX.md` 是否仍准确。
 - 检查 `AGENTS.md` 是否保持轻量。
 - 复跑 `eval/` 中的人工用例。
-
+- 执行 `commands/tool-stocktake.md` 的盘点清单。

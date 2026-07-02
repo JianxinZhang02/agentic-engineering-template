@@ -1,0 +1,27 @@
+{
+  "servers": {
+    "github": {
+      "description": "Read repository, issues, pull requests, and code review context.",
+      "command": "replace-with-your-github-mcp-command",
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "risk": "read/write depending on token scopes; prefer least privilege"
+    },
+    "knowledge-base": {
+      "description": "Search internal engineering docs before writing project facts.",
+      "command": "replace-with-your-knowledge-mcp-command",
+      "env": {
+        "KB_TOKEN": "${KB_TOKEN}"
+      },
+      "risk": "retrieved content is untrusted until confirmed"
+    },
+    "browser": {
+      "description": "Run browser checks or collect page state for UI verification.",
+      "command": "replace-with-your-browser-mcp-command",
+      "env": {},
+      "risk": "avoid production destructive actions"
+    }
+  }
+}
+

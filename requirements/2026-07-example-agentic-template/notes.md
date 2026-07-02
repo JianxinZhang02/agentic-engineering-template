@@ -26,6 +26,12 @@
 | 示例需求应保留完整生命周期产物 | `context/project/example-project/experience.md` | 方便新人照着跑 |
 | AGENTS.md 不应膨胀 | `context/experience/common-pitfalls.md` | 避免上下文过载 |
 
+## AI 错误和纠偏
+
+| 场景 | 错误 | 缺失知识 | 修正方式 | 建议沉淀 |
+| --- | --- | --- | --- | --- |
+| 模板发布前检查 | 示例 notes 曾引用本地原始资料文件 | 模板分发时不能依赖本地资料 | 改为通用来源描述 | `context/experience/common-pitfalls.md` |
+
 ## 不沉淀信息
 
 | 信息 | 原因 |

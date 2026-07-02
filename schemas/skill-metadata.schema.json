@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Metadata",
+  "type": "object",
+  "required": ["name", "description", "owner", "status"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "description": { "type": "string", "minLength": 10 },
+    "owner": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "active", "deprecated"] },
+    "origin": { "type": "string" },
+    "last_reviewed": { "type": "string" }
+  },
+  "additionalProperties": true
+}
+

@@ -28,20 +28,28 @@
 ├── context/               # 团队和项目公共记忆
 ├── requirements/          # 需求生命周期工作区
 ├── templates/             # 需求、设计、测试、知识条目的模板
+├── prompts/               # 分层 Prompt：核心、工作流、技术栈、任务提示
+├── rules/                 # 可安装规则切片：common + 技术栈扩展
 ├── skills/                # 工具中立的专业能力包说明
 ├── agents/                # 角色化审查者和辅助者定义
 ├── commands/              # 标准动作说明
+├── hooks/                 # Hook 设计和跨工具自动化约束
+├── mcp-configs/           # MCP 集成样例和风险边界
 ├── adapters/              # Claude Code、Codex、WorkBuddy 等工具适配
-└── eval/                  # 人工可执行的规范回归用例
+├── eval/                  # 人工可执行的规范回归用例和指标
+├── docs/                  # onboarding、运行模型、维护说明
+└── schemas/               # 后续机械化校验的轻量 schema
 ```
 
 ## 第一天要改什么
 
 - `AGENTS.md`：把项目身份、默认项目名、工具约束改成你的团队语境。
 - `context/team/`：确认 Git、评审、测试和知识管理规范是否符合团队现状。
+- `context/team/ai-policy.md`：确认 AI 使用、责任边界和安全边界。
 - `context/project/_template/`：复制为真实项目目录，例如 `context/project/payment-service/`。
 - `requirements/_template/`：复制为第一个真实需求目录，例如 `requirements/2026-07-login-audit/`。
 - `adapters/`：选择你实际使用的工具，按文档配置入口。
+- `prompts/templates/` 和 `rules/`：按你的项目技术栈补充或裁剪。
 
 ## 如何启动第一个需求
 
@@ -67,6 +75,14 @@
 
 适配层可以变化，但所有工具都必须遵守同一套 `AGENTS.md`、`context/` 和 `requirements/` 规则。
 
+## 如何让模板持续变强
+
+- 新增规则前，先阅读 `context/team/tooling-governance.md`，判断是否真的应该工具化。
+- 修改 Prompt、Skill、Command、Hook 后，补充或复跑 `eval/`。
+- 每月按 `docs/template-maintenance.md` 做一次规范瘦身。
+- 用 `context/team/metrics.md` 记录门禁拦截、知识沉淀和工具使用情况。
+- 涉及安全、权限、敏感数据时，按 `skills/security-review/SKILL.md` 执行安全审查。
+
 ## 第一版完成定义
 
 - fork 后能在 30 分钟内启动第一个需求。
@@ -75,4 +91,4 @@
 - 代码审查和测试记录有统一格式。
 - 需求结束后能产生至少一条可复用知识或明确说明无沉淀项。
 - `eval/` 中的人工用例能够验证模板可用。
-
+- 核心责任边界、提示词分层、规则切片、Hook/MCP 边界和评估指标有明确入口。

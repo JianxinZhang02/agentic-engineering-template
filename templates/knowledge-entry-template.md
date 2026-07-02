@@ -18,8 +18,8 @@
 - 来源文件：
 - 确认人：
 - 更新时间：
+- 可信度：confirmed / needs-review / deprecated
 
 ## 反例
 
 说明常见错误或不适用场景。
-
